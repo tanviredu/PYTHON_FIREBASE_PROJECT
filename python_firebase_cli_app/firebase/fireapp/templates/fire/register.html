@@ -1,0 +1,79 @@
+{% extends 'fire/base.html' %}
+
+{% block content%}
+
+
+<script type="text/javascript">
+
+
+	jQuery(document).ready(function(){
+
+
+	// Show password Button
+	$("#showpassword").on('click', function(){
+
+		var pass = $("#password");
+		var fieldtype = pass.attr('type');
+		if (fieldtype == 'password') {
+			pass.attr('type', 'text');
+			$(this).text("Hide Password");
+		}else{
+			pass.attr('type', 'password');
+			$(this).text("Show Password");
+		}
+
+
+	});
+
+
+
+
+
+});
+
+
+</script>
+
+
+
+
+	<h2 class="text-center"><strong>&nbsp;&nbsp;&nbsp;Register</strong> <br/></h2><br/>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<!-- Start form -->
+                    <form method="POST">
+                    	{% csrf_token %}
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" name="email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter your gmail address">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" name="password" class="form-control" name="password" id="password" placeholder="Enter gmail Password">
+                      </div>
+                      <div class="text-center">
+                      <div class="form-check">
+                          <div class="container">
+                            <center>you can use your provider account</center>
+
+                         </div>
+                        <button class="btn btn-info" type="button" name="showpassword" id="showpassword" value="Show Password">Show password</button>
+
+                         <button type="submit" name="submit" value="submit" class="btn btn-success">Register</button>
+                        <div class="container">
+
+                        </div>
+                      </div>
+
+                    </form>
+
+
+			<!-- End form -->
+		</div>
+
+
+
+	</div>
+
+
+
+{% endblock %}

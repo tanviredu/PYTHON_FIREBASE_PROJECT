@@ -1,0 +1,23 @@
+{% extends 'fire/base.html' %}
+
+{% block content %}
+
+
+         {% if messages %}
+        <div class="container">
+              {% for message in messages%}
+                <div class="alert alert-warning" role="alert">
+                   {{message}}
+                  </div>
+
+                  {% endfor %}
+            </div>
+
+        {% else %}
+            {% include "fire/sidenav.html"%}
+        <
+
+                  {% endif %}
+
+
+{% endblock %}

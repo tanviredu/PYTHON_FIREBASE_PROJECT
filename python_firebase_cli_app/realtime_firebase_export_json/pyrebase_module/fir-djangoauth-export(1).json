@@ -1,0 +1,13 @@
+{
+  "guest" : {
+    "faisal" : "f1234",
+    "guest123" : "guest123",
+    "hasnat" : "hasnat1223"
+  },
+  "user" : {
+    "Tanvir" : 1122,
+    "admin" : "admin",
+    "ornob" : "ornob",
+    "pirate" : "pirate1122"
+  }
+}
